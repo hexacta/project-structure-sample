@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "sample-web",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -14,5 +14,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
