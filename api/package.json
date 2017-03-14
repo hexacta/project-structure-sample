@@ -2,12 +2,6 @@
   "name": "sample-api",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "start": "nodemon src/server.js --exec babel-node",
-    "clean": "rimraf dist",
-    "prebuild": "npm run clean",
-    "build": "babel src -d dist"
-  },
   "dependencies": {
     "express": "^4.15.2"
   },
@@ -17,7 +11,12 @@
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1"
   },
-  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/server.js --exec babel-node",
+    "clean": "rimraf build",
+    "prebuild": "npm run clean",
+    "build": "babel src -d build"
+  },
   "babel": {
     "presets": [
       [
