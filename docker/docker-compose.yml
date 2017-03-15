@@ -1,0 +1,13 @@
+version: '2'
+services:
+  node:
+    build: 
+      context: ..
+      dockerfile: docker/node.dockerfile
+  nginx:
+    build: 
+      context: ..
+      dockerfile: docker/nginx.dockerfile
+    ports:
+     - "8000:80"
+#docker-compose -p docker up --build

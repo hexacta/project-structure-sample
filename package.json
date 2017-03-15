@@ -13,10 +13,17 @@
     "start:web": "npm run start --prefix web",
 
     "build": "run-p build:api build:web",
-    "build:api": "cd api && npm run build",
-    "build:web": "cd web && npm run build"
+    "build:api": "cd api && npm run build && cd ..",
+    "build:web": "cd web && npm run build && cd ..",
+
+    "prestart:docker": "npm run build",
+    "start:docker": "docker-compose -f docker/docker-compose.yml up -d --build",
+    "poststart:docker": "opn http://localhost:8000/",
+
+    "stop:docker": "docker-compose -f docker/docker-compose.yml down"
   },
   "devDependencies": {
-    "npm-run-all": "^4.0.2"
+    "npm-run-all": "^4.0.2",
+    "opn-cli": "^3.1.0"
   }
 }
