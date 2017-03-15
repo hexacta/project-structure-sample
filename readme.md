@@ -9,7 +9,7 @@ First thing you need to do is install dependencies:
 $ npm install
 ```
 
-Then you can run the SPA and the API with:
+Then you can run the SPA and the API in development mode (watching for changes) with:
 ```
 $ npm start
 ```
